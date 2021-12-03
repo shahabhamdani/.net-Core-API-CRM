@@ -502,7 +502,7 @@ namespace CRM_BackEnd_API.Models
                     .HasColumnName("EmployeeID")
                     .HasColumnType("int(100)");
 
-                entity.Property(e => e.EnteredBy).HasColumnType("timestamp");
+                entity.Property(e => e.EnteredBy).HasColumnType("char(225)");
 
                 entity.Property(e => e.EnteredOn).HasColumnType("timestamp");
 
@@ -515,7 +515,7 @@ namespace CRM_BackEnd_API.Models
                     .HasCollation("utf8_unicode_ci");
 
                 entity.Property(e => e.JoiningDate)
-                    .HasColumnType("char(50)")
+                    .HasColumnType("timestamp")
                     .HasCharSet("utf8")
                     .HasCollation("utf8_unicode_ci");
 
@@ -688,7 +688,7 @@ namespace CRM_BackEnd_API.Models
                     .HasColumnName("CompanyID")
                     .HasColumnType("int(100)");
 
-                entity.Property(e => e.EnteredBy).HasColumnType("timestamp");
+                entity.Property(e => e.EnteredBy).HasColumnType("varchar(255)");
 
                 entity.Property(e => e.EnteredOn).HasColumnType("timestamp");
 

@@ -1,7 +1,4 @@
-﻿
-
-
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,6 +8,7 @@ using CRM_BackEnd_API.Models;
 
 namespace CRM_BackEnd_API.Controllers
 {
+
     [ApiController]
     [Route("api/[controller]")]
     public class CompanyController : ControllerBase
@@ -68,7 +66,7 @@ namespace CRM_BackEnd_API.Controllers
             }
 
 
-            db.Company.Remove(companyToDelete);
+            db.Remove(companyToDelete);
             db.SaveChanges();
             return NoContent();
 

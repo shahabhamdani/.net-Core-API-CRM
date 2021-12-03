@@ -6,15 +6,15 @@ namespace CRM_BackEnd_API.Models
     public partial class JobInfo
     {
         public int JodInfoId { get; set; }
-        public string JoiningDate { get; set; }
+        public DateTime? JoiningDate { get; set; }
         public string Active { get; set; }
         public DateTime? ExpiryDate { get; set; }
-        public int? Salary { get; set; }
+        public int Salary { get; set; }
         public int DepartmentId { get; set; }
         public int DesignationId { get; set; }
         public int EmployeeId { get; set; }
         public string JobType { get; set; }
-        public DateTime? EnteredBy { get; set; }
+        public string EnteredBy { get; set; }
         public DateTime? EnteredOn { get; set; }
         public int BranchId { get; set; }
         public int CompanyId { get; set; }

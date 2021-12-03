@@ -36,6 +36,11 @@ namespace CRM_BackEnd_API
                 app.UseDeveloperExceptionPage();
             }
 
+          app.UseCors(x => x
+         .AllowAnyOrigin()
+         .AllowAnyMethod()
+         .AllowAnyHeader());
+
             app.UseHttpsRedirection();
 
             app.UseRouting();

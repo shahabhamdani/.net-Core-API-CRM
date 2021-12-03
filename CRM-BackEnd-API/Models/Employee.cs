@@ -17,12 +17,12 @@ namespace CRM_BackEnd_API.Models
         public string PhoneNumber { get; set; }
         public int CompanyId { get; set; }
         public string EnteredBy { get; set; }
-        public DateTime? EnteredOn { get; set; }
+        public DateTime EnteredOn { get; set; }
         public string Address { get; set; }
         public int BranchId { get; set; }
         public string GuardianRelation { get; set; }
         public string GuardianName { get; set; }
-        public DateTime? DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string Gender { get; set; }
         public string MobileNumber { get; set; }
         public string Cnicnumber { get; set; }

@@ -10,7 +10,7 @@ namespace CRM_BackEnd_API.Models
         public string Password { get; set; }
         public string UserRole { get; set; }
         public string Active { get; set; }
-        public DateTime? EnteredBy { get; set; }
+        public string EnteredBy { get; set; }
         public DateTime? EnteredOn { get; set; }
         public int UserRolesId { get; set; }
         public int CompanyId { get; set; }

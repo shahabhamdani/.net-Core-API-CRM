@@ -26,6 +26,10 @@ namespace CRM_BackEnd_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddControllersWithViews()
+    .AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

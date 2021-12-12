@@ -48,6 +48,7 @@ namespace CRM_BackEnd_API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseAuthorization();
 

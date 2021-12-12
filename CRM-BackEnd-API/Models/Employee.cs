@@ -8,6 +8,8 @@ namespace CRM_BackEnd_API.Models
         public Employee()
         {
             JobInfo = new HashSet<JobInfo>();
+            Users = new HashSet<Users>();
+
         }
 
         public int EmployeeId { get; set; }
@@ -37,5 +39,7 @@ namespace CRM_BackEnd_API.Models
         public virtual Branches Branch { get; set; }
         public virtual Company Company { get; set; }
         public virtual ICollection<JobInfo> JobInfo { get; set; }
+        public virtual ICollection<Users> Users { get; set; }
+
     }
 }

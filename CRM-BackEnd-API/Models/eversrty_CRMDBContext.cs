@@ -702,10 +702,9 @@ namespace CRM_BackEnd_API.Models
                     .HasCharSet("utf8")
                     .HasCollation("utf8_unicode_ci");
 
-                entity.Property(e => e.UserRole)
-                    .HasColumnType("char(100)")
-                    .HasCharSet("utf8")
-                    .HasCollation("utf8_unicode_ci");
+                entity.Property(e => e.EmployeeId)
+                    .HasColumnName("EmployeeID")
+                    .HasColumnType("int(100)");
 
                 entity.Property(e => e.UserRolesId)
                     .HasColumnName("UserRolesID")
@@ -728,6 +727,13 @@ namespace CRM_BackEnd_API.Models
                     .HasForeignKey(d => d.UserRolesId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FKUsers757342");
+
+
+                entity.HasOne(d => d.Employee)
+                    .WithMany(p => p.Users)
+                    .HasForeignKey(d => d.EmployeeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FKUsers505178");
             });
 
             OnModelCreatingPartial(modelBuilder);
